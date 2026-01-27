@@ -3,12 +3,12 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
+  host: "sandbox.smtp.mailtrap.io",
+  port: 2525,
   secure: false, // Use STARTTLS
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.MAILTRAP_USER,
+    pass: process.env.MAILTRAP_PASS,
   },
   connectionTimeout: 10000, // 10 seconds
   greetingTimeout: 10000,
@@ -25,7 +25,7 @@ export async function sendEmail(
 
   console.log('to',to,'subject',subject,'message',message)
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: '"Automation System" <noreply@automation.test>',
     to,
     subject,
     text: message,
