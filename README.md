@@ -177,8 +177,8 @@ npm install
 ```env
 MONGO_URI=mongodb://localhost:27017/automation-flow
 PORT=5000
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-specific-password
+MAILTRAP_PASS = your-mailtrap-pass
+MAILTRAP_USER = mailtrap-user
 ```
 
 4. Build and run:
