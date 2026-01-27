@@ -337,8 +337,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-
-
+```
 ## License
 MIT
-```
